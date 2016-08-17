@@ -6,11 +6,17 @@ if ! grep -q "profile_postgres" /var/lib/puppet/client_data/catalog/`hostname`.j
 fi
 
 @test "Is postgres server installed?" {
-    rpm -q postgresql-server
+  rpm -q postgresql-server
 }
 
 @test "Is postgres running?" {
-    systemctl status postgresql
+  if [ -e '/usr/bin/systemctl' ]
+  then
+    run systemctl status postgresql
+  else
+    run service postgresql status
+  fi
+  [ "$status" -eq 0 ]
 }
 
 
