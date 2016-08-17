@@ -20,11 +20,11 @@ tail -n 1)
   ping -c 1 ${nameserver2}
 }
 
-# check that bind-utils is installed, otherwise we have no nslookup command
-@test "is bind-utils installed?" {
+# bind-utils is not part of a base install, so install it and check
+@test "was bind-utils successfully installed?" {
+  yum -y --quiet install bind-utils
   rpm -q bind-utils
 }
-
 # try to resolve the SUT's hostname
 @test "name resolution, can I resolve System Under Test fqdn?" {
   nslookup $(hostname -f)
