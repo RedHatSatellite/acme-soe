@@ -34,6 +34,7 @@ tail -n 1)
 ### add some DNS lookups of internal machines
 ### obviously you need to adjust these to your site name
 ###
+#
 # webserver at ACME
 @test "name resolution, can I resolve the webserver fqdn?" {
   nslookup www.example.com
