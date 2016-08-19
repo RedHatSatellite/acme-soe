@@ -4,8 +4,9 @@
     rpm -q puppet
 }
 
-# is you do NOT use puppet agent, then test for 3 instead of 0 at the end of the block
-@test "Is puppet agent NOT running?" {
+# if you do NOT use puppet agent, then test for 3 instead of 0 at the end of the block
+# if that is the case, you will obviously also want to change the test description
+@test "Is puppet agent running?" {
   if [ -e '/usr/bin/systemctl' ]
   then
     run systemctl status puppet
