@@ -7,6 +7,7 @@
   rpm -q ntp
 }
 
+# do not enable ntp here, you want to test that you enabled this correctly via puppet or kickstart
 @test "Is ntpd running?" {
   if [ -e '/usr/bin/systemctl' ]
   then
