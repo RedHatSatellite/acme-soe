@@ -1,5 +1,9 @@
 #!/usr/bin/env bats
 
+###
+### you may want to make this test a bit more intelligent
+###
+
 @test "Is rsyslog installed?" {
   rpm -q rsyslog
 }
