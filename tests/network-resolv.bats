@@ -37,12 +37,12 @@ tail -n 1)
 #
 # webserver at ACME
 @test "name resolution, can I resolve the webserver fqdn?" {
-  skip "user did not configure this test correctly"
+#  skip "user did not configure this test correctly"
   nslookup www.example.com
 }
 
 # Jenkins server at ACME
 @test "name resolution, can I resolve my Jenkins server's fqdn?" {
-  skip "user did not configure this test correctly"
+#  skip "user did not configure this test correctly"
   nslookup jenkins.example.com
 }
