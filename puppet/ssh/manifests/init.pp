@@ -69,7 +69,7 @@ class ssh (
     content => template("ssh/banner.erb"),
   }
 
-  if ($domain == "acme.com") or ($domain == "example.com") {
+  if ($domain == "sattest.pcfe.net") or ($domain == "internal.pcfe.net") {
     class { ssh::admin_keys: }
   } elsif ($domain == "acme.prod") {
     class { ssh::admin_keys::prod: }
