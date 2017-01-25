@@ -1,4 +1,9 @@
 #!/usr/bin/env bats
+# vim: filetype=sh:autoindent:tabstop=2:shiftwidth=2:expandtab
+
+set -o pipefail
+
+load os_helper
 
 if ! grep -q "profile_postgres" /var/lib/puppet/client_data/catalog/`hostname`.json >&2 ; then
   echo 1
