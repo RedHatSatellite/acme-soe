@@ -1,0 +1,4 @@
+please note that you can also retrieve bats from EPEL
+(should work even without rhel-7-server-optional-rpms and rhel-7-server-extras-rpms)
+if you intend to use soe-ci in a puppet-only setup
+the EPEL repo will only need to be available to your test hosts, your productive hosts do not need bats installed.
