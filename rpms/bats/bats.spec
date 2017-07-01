@@ -1,6 +1,6 @@
 Name:           bats
 Version:        0.4.0
-Release:        6%{?dist}
+Release:        7%{?dist}
 Summary:        Bash Automated Testing System
 Group:          System Environment/Base
 License:        other
