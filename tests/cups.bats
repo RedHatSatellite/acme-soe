@@ -2,6 +2,11 @@
 
 # vim: filetype=sh:autoindent:tabstop=2:shiftwidth=2:expandtab
 
+if ! grep -q "profile_cups" /var/lib/puppet/client_data/catalog/`hostname`.json >&2 ; then
+  echo 1
+  exit 1 
+fi
+
 load os_helper
 
 @test "cups, is cups installed?" {
