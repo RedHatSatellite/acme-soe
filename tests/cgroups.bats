@@ -17,6 +17,7 @@ load os_helper
 }
 
 @test "cgroups, is cgconfig running?" {
+  skip "needs a puppet module to enable"
   if [ -e '/usr/bin/systemctl' ]
   then
     run systemctl status cgconfig
