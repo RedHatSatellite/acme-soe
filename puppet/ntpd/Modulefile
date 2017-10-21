@@ -1,9 +1,0 @@
-name    'acme-ntpd'
-version '0.0.1'
-source 'https://github.com/RedHatEMEA/acme-soe'
-author 'Patrick C. F. Ernzer <pcfe@pcfe.net>'
-license 'GPL v3'
-summary 'NTP daemon module'
-description 'Simple module to install and start the NTP daemon'
-project_page 'https://github.com/RedHatEMEA/acme-soe'
-

@@ -1,0 +1,14 @@
+{
+  "name": "acme-profile",
+  "version": "0.3.1",
+  "author": "Nick Strugnell <nstrug@redhat.com>",
+  "summary": "Base Class for Profile",
+  "license": "GPL v3",
+  "source": "https://github.com/RedHatEMEA/acme-soe",
+  "project_page": "https://github.com/RedHatEMEA/acme-soe",
+  "issues_url": "https://github.com/RedHatEMEA/acme-soe/issues",
+  "description": "Profile modules should inherit from this class",
+  "dependencies": [
+  
+  ]
+}

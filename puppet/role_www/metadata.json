@@ -1,0 +1,14 @@
+{
+  "name": "acme-role_www",
+  "version": "0.2.1",
+  "author": "Nick Strugnell <nstrug@redhat.com>",
+  "summary": "Role class for a webserver",
+  "license": "GPL v3",
+  "source": "https://github.com/RedHatEMEA/acme-soe",
+  "project_page": "https://github.com/RedHatEMEA/acme-soe",
+  "issues_url": "https://github.com/RedHatEMEA/acme-soe/issues",
+  "description": "Include this class for a client in the webserver role",
+  "dependencies": [
+  
+  ]
+}

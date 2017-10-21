@@ -1,0 +1,14 @@
+{
+  "name": "acme-profile_nfs",
+  "version": "0.3.1",
+  "author": "Nick Strugnell <nstrug@redhat.com>",
+  "summary": "Simple NFS server and client configuration",
+  "license": "GPL v3",
+  "source": "https://github.com/RedHatEMEA/acme-soe",
+  "project_page": "https://github.com/RedHatEMEA/acme-soe",
+  "issues_url": "https://github.com/RedHatEMEA/acme-soe/issues",
+  "description": "Simple NFS server and client configuration",
+  "dependencies": [
+  
+  ]
+}

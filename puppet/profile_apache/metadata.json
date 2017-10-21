@@ -1,0 +1,14 @@
+{
+  "name": "acme-profile_apache",
+  "version": "0.3.1",
+  "author": "Nick Strugnell <nstrug@redhat.com>",
+  "summary": "Profile Class for Apache webserver",
+  "license": "GPL v3",
+  "source": "https://github.com/RedHatEMEA/acme-soe",
+  "project_page": "https://github.com/RedHatEMEA/acme-soe",
+  "issues_url": "https://github.com/RedHatEMEA/acme-soe/issues",
+  "description": "Use this module to configure a client with the Apache webserver profile",
+  "dependencies": [
+  
+  ]
+}
