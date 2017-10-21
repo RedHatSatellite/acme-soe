@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="70f44bfe-b0c2-4c58-a4db-a308d2dc8be2" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/jenkinsSettings.xml" />
-    </list>
+    <list default="true" id="70f44bfe-b0c2-4c58-a4db-a308d2dc8be2" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -13,96 +11,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="metadata.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/puppet/profile_base/metadata.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="18" lean-forward="false" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="18" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="metadata.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/puppet/profile_dmz/metadata.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="18" lean-forward="false" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="18" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="metadata.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/puppet/profile_nfs/metadata.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="18" lean-forward="false" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="18" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="metadata.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/puppet/profile_postgres/metadata.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="18" lean-forward="false" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="18" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="metadata.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/puppet/qpid/metadata.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="18" lean-forward="false" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="18" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="metadata.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/puppet/role/metadata.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="18" lean-forward="false" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="18" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="metadata.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/puppet/role_db/metadata.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="18" lean-forward="false" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="18" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="metadata.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/puppet/role_www/metadata.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="18" lean-forward="false" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="18" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="init.pp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/puppet/bats/manifests/init.pp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="jenkinsSettings.xml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/.idea/jenkinsSettings.xml">
           <provider selected="true" editor-type-id="text-editor">
@@ -140,6 +48,7 @@
         <option value="$PROJECT_DIR$/puppet/role/metadata.json" />
         <option value="$PROJECT_DIR$/puppet/role_db/metadata.json" />
         <option value="$PROJECT_DIR$/puppet/role_www/metadata.json" />
+        <option value="$PROJECT_DIR$/.idea/jenkinsSettings.xml" />
       </list>
     </option>
   </component>
@@ -175,7 +84,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
+      <pane id="PackagesPane" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -192,111 +101,14 @@
             <path>
               <item name="acme-soe" type="b2602c69:ProjectViewProjectNode" />
               <item name="acme-soe" type="462c0819:PsiDirectoryNode" />
-              <item name="puppet" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="acme-soe" type="b2602c69:ProjectViewProjectNode" />
-              <item name="acme-soe" type="462c0819:PsiDirectoryNode" />
-              <item name="puppet" type="462c0819:PsiDirectoryNode" />
-              <item name="auto" type="4c48a1f:PuppetPsiDirectoryNode$Module" />
-            </path>
-            <path>
-              <item name="acme-soe" type="b2602c69:ProjectViewProjectNode" />
-              <item name="acme-soe" type="462c0819:PsiDirectoryNode" />
-              <item name="puppet" type="462c0819:PsiDirectoryNode" />
-              <item name="auto" type="4c48a1f:PuppetPsiDirectoryNode$Module" />
-              <item name="manifests" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="acme-soe" type="b2602c69:ProjectViewProjectNode" />
-              <item name="acme-soe" type="462c0819:PsiDirectoryNode" />
-              <item name="puppet" type="462c0819:PsiDirectoryNode" />
-              <item name="bats" type="4c48a1f:PuppetPsiDirectoryNode$Module" />
-            </path>
-            <path>
-              <item name="acme-soe" type="b2602c69:ProjectViewProjectNode" />
-              <item name="acme-soe" type="462c0819:PsiDirectoryNode" />
-              <item name="puppet" type="462c0819:PsiDirectoryNode" />
-              <item name="bats" type="4c48a1f:PuppetPsiDirectoryNode$Module" />
-              <item name="manifests" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="acme-soe" type="b2602c69:ProjectViewProjectNode" />
-              <item name="acme-soe" type="462c0819:PsiDirectoryNode" />
-              <item name="puppet" type="462c0819:PsiDirectoryNode" />
-              <item name="firewall" type="4c48a1f:PuppetPsiDirectoryNode$Module" />
-            </path>
-            <path>
-              <item name="acme-soe" type="b2602c69:ProjectViewProjectNode" />
-              <item name="acme-soe" type="462c0819:PsiDirectoryNode" />
-              <item name="puppet" type="462c0819:PsiDirectoryNode" />
-              <item name="ntpd" type="4c48a1f:PuppetPsiDirectoryNode$Module" />
-            </path>
-            <path>
-              <item name="acme-soe" type="b2602c69:ProjectViewProjectNode" />
-              <item name="acme-soe" type="462c0819:PsiDirectoryNode" />
-              <item name="puppet" type="462c0819:PsiDirectoryNode" />
-              <item name="profile" type="4c48a1f:PuppetPsiDirectoryNode$Module" />
-            </path>
-            <path>
-              <item name="acme-soe" type="b2602c69:ProjectViewProjectNode" />
-              <item name="acme-soe" type="462c0819:PsiDirectoryNode" />
-              <item name="puppet" type="462c0819:PsiDirectoryNode" />
-              <item name="profile_apache" type="4c48a1f:PuppetPsiDirectoryNode$Module" />
-            </path>
-            <path>
-              <item name="acme-soe" type="b2602c69:ProjectViewProjectNode" />
-              <item name="acme-soe" type="462c0819:PsiDirectoryNode" />
-              <item name="puppet" type="462c0819:PsiDirectoryNode" />
-              <item name="profile_base" type="4c48a1f:PuppetPsiDirectoryNode$Module" />
-            </path>
-            <path>
-              <item name="acme-soe" type="b2602c69:ProjectViewProjectNode" />
-              <item name="acme-soe" type="462c0819:PsiDirectoryNode" />
-              <item name="puppet" type="462c0819:PsiDirectoryNode" />
-              <item name="profile_dmz" type="4c48a1f:PuppetPsiDirectoryNode$Module" />
-            </path>
-            <path>
-              <item name="acme-soe" type="b2602c69:ProjectViewProjectNode" />
-              <item name="acme-soe" type="462c0819:PsiDirectoryNode" />
-              <item name="puppet" type="462c0819:PsiDirectoryNode" />
-              <item name="profile_nfs" type="4c48a1f:PuppetPsiDirectoryNode$Module" />
-            </path>
-            <path>
-              <item name="acme-soe" type="b2602c69:ProjectViewProjectNode" />
-              <item name="acme-soe" type="462c0819:PsiDirectoryNode" />
-              <item name="puppet" type="462c0819:PsiDirectoryNode" />
-              <item name="profile_postgres" type="4c48a1f:PuppetPsiDirectoryNode$Module" />
-            </path>
-            <path>
-              <item name="acme-soe" type="b2602c69:ProjectViewProjectNode" />
-              <item name="acme-soe" type="462c0819:PsiDirectoryNode" />
-              <item name="puppet" type="462c0819:PsiDirectoryNode" />
-              <item name="qpid" type="4c48a1f:PuppetPsiDirectoryNode$Module" />
-            </path>
-            <path>
-              <item name="acme-soe" type="b2602c69:ProjectViewProjectNode" />
-              <item name="acme-soe" type="462c0819:PsiDirectoryNode" />
-              <item name="puppet" type="462c0819:PsiDirectoryNode" />
-              <item name="role" type="4c48a1f:PuppetPsiDirectoryNode$Module" />
-            </path>
-            <path>
-              <item name="acme-soe" type="b2602c69:ProjectViewProjectNode" />
-              <item name="acme-soe" type="462c0819:PsiDirectoryNode" />
-              <item name="puppet" type="462c0819:PsiDirectoryNode" />
-              <item name="role_db" type="4c48a1f:PuppetPsiDirectoryNode$Module" />
-            </path>
-            <path>
-              <item name="acme-soe" type="b2602c69:ProjectViewProjectNode" />
-              <item name="acme-soe" type="462c0819:PsiDirectoryNode" />
-              <item name="puppet" type="462c0819:PsiDirectoryNode" />
-              <item name="role_www" type="4c48a1f:PuppetPsiDirectoryNode$Module" />
+              <item name=".idea" type="462c0819:PsiDirectoryNode" />
+              <item name="inspectionProfiles" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -365,6 +177,7 @@
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
   </component>
+  <component name="SpringUtil" SPRING_PRE_LOADER_OPTION="false" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="70f44bfe-b0c2-4c58-a4db-a308d2dc8be2" name="Default" comment="" />
@@ -391,34 +204,54 @@
       <option name="project" value="LOCAL" />
       <updated>1508588577238</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="add values for auto refresh&#10;&#10;- jobRefreshPeriod 15 in&#10;- rssRefreshPeriod 1 min">
+      <created>1508602149412</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1508602149412</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1729000" />
+    <option name="totallyTimeSpent" value="2070000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1204" y="400" width="1920" height="1170" extended-state="6" />
+    <frame x="1196" y="400" width="1928" height="1174" extended-state="6" />
     <layout>
-      <window_info id="Jenkins" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2080537" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16113745" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32981783" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32981783" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32981783" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32885906" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32981783" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Jenkins" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2080537" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16113745" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32981783" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32981783" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32981783" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Jenkins" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2080537" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16113745" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -430,18 +263,42 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="bump all version numbers to test if ec68c1e works as intended." />
     <MESSAGE value="fiorst try at IntelliJ IDEA configs" />
-    <option name="LAST_COMMIT_MESSAGE" value="fiorst try at IntelliJ IDEA configs" />
+    <MESSAGE value="add values for auto refresh&#10;&#10;- jobRefreshPeriod 15 in&#10;- rssRefreshPeriod 1 min" />
+    <option name="LAST_COMMIT_MESSAGE" value="add values for auto refresh&#10;&#10;- jobRefreshPeriod 15 in&#10;- rssRefreshPeriod 1 min" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/puppet/profile_apache/metadata.json">
+    <entry file="file://$PROJECT_DIR$/puppet/role_www/metadata.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
           <caret line="2" column="18" lean-forward="false" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="18" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/puppet/profile_postgres/metadata.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="18" lean-forward="false" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/jenkinsSettings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/puppet/profile_apache/metadata.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="18" lean-forward="false" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="18" />
         </state>
       </provider>
     </entry>
@@ -497,7 +354,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
           <caret line="2" column="18" lean-forward="false" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="18" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -521,7 +377,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
           <caret line="2" column="18" lean-forward="false" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="18" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -577,7 +432,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
           <caret line="2" column="18" lean-forward="false" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="18" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -601,7 +455,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
           <caret line="2" column="18" lean-forward="false" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="18" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -657,7 +510,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
           <caret line="2" column="18" lean-forward="false" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="18" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -730,7 +582,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
           <caret line="2" column="18" lean-forward="false" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="18" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -786,7 +637,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
           <caret line="2" column="18" lean-forward="false" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="18" />
-          <folding />
         </state>
       </provider>
     </entry>
