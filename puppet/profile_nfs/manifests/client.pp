@@ -20,10 +20,10 @@
 # None
 #
 class profile_nfs::client (
-  $managed  = true,
+  $managed = true,
 ) {
-  package { ['rpcbind','nfs-utils']:
-    ensure  => installed,
+  package { ['rpcbind', 'nfs-utils']:
+    ensure => installed,
   }
 
   if (str2bool($managed)) {

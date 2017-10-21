@@ -23,10 +23,10 @@ class role_db (
   tag 'role'
 
   include role
-  
-  case $database {
-    'postgres':		{ include profile_postgres }
-    'oracle':		{ include profile_oracle }
-    default:		{ fail("$database is not currently supported") }  
-}
 
+  case $database {
+    'postgres': { include profile_postgres }
+    'oracle': { include profile_oracle }
+    default: { fail("${database} is not currently supported") }
+  }
+}

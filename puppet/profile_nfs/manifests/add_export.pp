@@ -30,7 +30,7 @@
 #    opts        => 'rw,sync,all_squash',
 #  }
 #
-define profile_nfs::add_export(
+define profile_nfs::add_export (
   $directory = $title,
   $clients   = '*',
   $opts      = 'rw,sync,root_squash',

@@ -17,9 +17,9 @@
 #  $exports = hiera_array('profile_nfs::exports', [])
 #  profile_nfs::add_export_hiera{$exports:}
 #
-define profile_nfs::add_export_hiera(
+define profile_nfs::add_export_hiera (
 ) {
-  profile_nfs::add_export{ $title['directory']:
+  profile_nfs::add_export { $title['directory']:
     clients => $title['clients'],
     opts    => $title['opts'],
   }

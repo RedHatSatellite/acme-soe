@@ -16,11 +16,11 @@
 #
 class profile_postgres {
   tag 'profile_postgres'
-  
+
   include profile
 
-  package {"postgresql-server":
-	ensure => installed,
+  package { 'postgresql-server':
+    ensure => installed,
   }
 
 }

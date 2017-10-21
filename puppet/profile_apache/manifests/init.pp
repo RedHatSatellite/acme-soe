@@ -19,14 +19,14 @@ class profile_apache {
 
   include profile
 
-  package {"httpd":
-	ensure => installed,
+  package { 'httpd':
+    ensure => installed,
   }
 
-  service {"httpd":
-	ensure => running,
-	enable => true,
-	require => Package["httpd"],
+  service { 'httpd':
+    ensure  => running,
+    enable  => true,
+    require => Package['httpd'],
   }
 }
 

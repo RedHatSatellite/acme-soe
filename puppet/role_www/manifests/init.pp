@@ -14,7 +14,7 @@
 #
 # none
 #
-class role_www  {
+class role_www {
   tag 'role_www'
   tag 'role'
 

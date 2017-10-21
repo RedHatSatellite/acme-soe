@@ -35,10 +35,10 @@
 # Install-only option without managing /etc/exports:
 # profile_nfs::config_server: true
 #
-class profile_nfs(
+class profile_nfs (
   $config_server = false,
 ) {
-  include profile 
+  include profile
   tag 'profile_nfs'
 
   # Always install the NFS client, optionally
@@ -51,5 +51,5 @@ class profile_nfs(
   # retrieve the list of exports using hiera to get a merged array of hashes
   # call profle_nfs::add_export through a wrapper to process each hash
   $exports = hiera_array('profle_nfs::exports', [])
-  profile_nfs::add_export_hiera{$exports:}
+  profile_nfs::add_export_hiera { $exports: }
 }
