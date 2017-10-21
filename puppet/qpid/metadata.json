@@ -1,0 +1,14 @@
+{
+  "name": "acme-qpid",
+  "version": "0.0.1",
+  "author": "Eric Lavarde <ericl+github@redhat.com",
+  "summary": "Qpid server module",
+  "license": "GPL v3",
+  "source": "https://github.com/RedHatEMEA/acme-soe",
+  "project_page": "https://github.com/RedHatEMEA/acme-soe",
+  "issues_url": "https://github.com/RedHatEMEA/acme-soe/issues",
+  "description": "Simple module to install and start the QPid server providing AMQP capability",
+  "dependencies": [
+  
+  ]
+}
