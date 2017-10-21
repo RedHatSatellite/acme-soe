@@ -1,6 +1,6 @@
 {
   "name": "acme-role_www",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "author": "Nick Strugnell <nstrug@redhat.com>",
   "summary": "Role class for a webserver",
   "license": "GPL v3",

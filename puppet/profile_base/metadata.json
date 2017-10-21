@@ -1,6 +1,6 @@
 {
   "name": "acme-profile_base",
-  "version": "0.2.5",
+  "version": "0.2.6",
   "author": "Nick Strugnell <nstrug@redhat.com>",
   "summary": "Base Profile class",
   "license": "GPL v3",

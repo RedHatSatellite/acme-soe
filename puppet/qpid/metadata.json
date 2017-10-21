@@ -1,6 +1,6 @@
 {
   "name": "acme-qpid",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "author": "Eric Lavarde <ericl+github@redhat.com",
   "summary": "Qpid server module",
   "license": "GPL v3",

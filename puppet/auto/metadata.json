@@ -1,6 +1,6 @@
 {
   "name": "acme-auto",
-  "version": "0.3.1",
+  "version": "0.3.2",
   "author": "Nick Strugnell <nstrug@redhat.com>",
   "summary": "Hiera Include",
   "license": "GPL v3",

@@ -1,6 +1,6 @@
 {
   "name": "acme-dmz",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "author": "chris procter <cprocter@redhat.com>",
   "license": "Licensed under (GPL 3.0)",
   "summary": "dmz setup class, should include all modules required to run in the dmz",
