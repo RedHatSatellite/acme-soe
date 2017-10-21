@@ -1,6 +1,6 @@
 {
   "name": "acme-ntpd",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "author": "Patrick C. F. Ernzer <pcfe@pcfe.net>",
   "summary": "NTP daemon module",
   "license": "GPL v3",
