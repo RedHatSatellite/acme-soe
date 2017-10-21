@@ -1,6 +1,6 @@
 {
   "name": "acme-role_db",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "author": "Nick Strugnell <nstrug@redhat.com>",
   "summary": "Role class for a database server",
   "license": "GPL v3",
