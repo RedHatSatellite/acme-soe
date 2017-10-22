@@ -17,9 +17,9 @@ file { '/root/.ssh':
     
     ssh_authorized_key { 'jenkins':
         ensure => present,
-        key    => 'AAAAB3NzaC1yc2EAAAADAQABAAABAQC7twgxsaWviob4nCKrSSoRs+1yyJdqA0iKUb/WFFRxIW6KzWXLENXaqpvMn0nKPFlRbcVaWFHzFiCCyDc2B1HWeH1ttCYV54TNWzY9ApkqZC/tfbM8Wg8MV0lXatRTxAq7hqwOnj6ZTELvZxCGXg4+oHdw5qzoHryyreAMr0t/851c5iwZ7bqq+Q4uG5OqviWMobQjt0QfhpqR5CNvdtPnlSEXs8yHK1WQMMCYm93LQmOW+cXjY2OG8Q9DBNlsz1zIiptJ8pWPAdKh0J8J4CwaP7MxsSoSHVLHqcORl4dVVkLxq5eQ/FfNrqPrBe5+56gFSv83k3vW42aAEg33Len1',
+        key    => 'AAAAB3NzaC1yc2EAAAADAQABAAABAQCUjnUfNNshxzbaHbjHJ5ohEvEMaNF6qab9uqAxXAZNtkoOmAjhAyW61jXpiQg82/5O9ReTVG0Ag49vVfZBq8wvgemC4MVZIDwK2M1h2rD2EQ0MN3w5o/YNeFJ6xXKCKePw4hf/yTjP/Pg0PStFjasPXWIPwqra83FH+ZOPYFta7FLI6W+5f7wNvIEx2l75OYNiItaCH7MqV6U7zUAX2QGczESZ3TmF1QGbv40iUcs9c6JkXBqgUHwd5AGu9b/lr/tTp1n4QHHDNtMKS6h79J36OwRE5TJkXEM34zw6RBV1Twx+SKP7dW2CVykQJ85L6ba8Ym4v44rEjEFIC7zBSFAH',
         type   => 'ssh-rsa',
         user   => 'root',
-        target => '/root/.ssh / authorized_keys',
+        target => '/root/.ssh/authorized_keys',
     }
 }
