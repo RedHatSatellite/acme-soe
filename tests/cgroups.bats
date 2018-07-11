@@ -5,6 +5,7 @@
 load os_helper
 
 @test "cgroups, are required packages installed?" {
+  skip "needs a puppet module to enable"
   if tIsRHEL 6; then
     tPackageExists libcgroup
   elif tIsRHEL 7; then
