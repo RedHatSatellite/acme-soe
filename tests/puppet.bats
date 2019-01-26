@@ -1,7 +1,7 @@
 #!/usr/bin/env bats
 
-@test "Is puppet installed?" {
-    rpm -q puppet
+@test "Is puppet-agent installed?" {
+    rpm -q puppet-agent
 }
 
 # if you do NOT use puppet agent, then test for 3 instead of 0 at the end of the block
