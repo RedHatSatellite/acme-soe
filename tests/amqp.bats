@@ -1,6 +1,6 @@
 #!/usr/bin/env bats
 
-if ! grep -q "profile_qpid" /var/lib/puppet/client_data/catalog/`hostname`.json >&2
+if ! grep -q "profile_qpid" /opt/puppetlabs/puppet/cache/client_data/catalog/`hostname`.json >&2
 then
   echo 1
   exit 1 
