@@ -1,0 +1,119 @@
+---
+# c.f. https://github.com/theforeman/foreman-ansible-modules
+# and the Plugin Index at https://theforeman.org/plugins/foreman-ansible-modules/
+#
+# Note that on this instance, my LCE Path is
+# lce-soecitest2 → SOE Test → Engineering → Development → Quality Assurance → Simulation → Production
+# hence my choices of `force_promote: …` and `auto_publish: …`.
+# You should adjust those two to your needs.
+
+# my Ansible control node connects to the Satellite server.
+# Purely personal preference to run the tasks on another box.
+- hosts: localhost
+
+  # put your vars wherever is comforable for you, a Tower, an AWX, a file automatically picked up by Ansible, a file explicitly specified, in this playbook or a mix. Your call, choose what fits your environment best.
+  vars_files:
+    - '/home/pcfe/work/git/HouseNet/ansible/pcfe.net/vars/satellite-secrets.yml' # in my setup that file only contains `vaulted_sat6_pass:`
+
+  vars:
+    sat_server_url: 'https://satellite.internal.pcfe.net'
+    sat_username: 'admin'
+    sat_password: '{{ vaulted_sat6_pass }}'
+    sat_org: 'Sat Test'
+    cu_dept: 'ACME'  # Do NOT use spaces, the content of this var is part of labels in Satellite
+    repo_url_rpms_rhel7: 'http://jenkins.internal.pcfe.net/pub/soe-repo/rhel7/'
+    repo_url_rpms_rhel8: 'http://jenkins.internal.pcfe.net/pub/soe-repo/rhel8/'
+    repo_verify_ssl:     no
+
+  tasks:
+    - name: 'Ensure Product used by soe-ci exists and is current in Satellite'
+      theforeman.foreman.product:
+        username:     '{{ sat_username }}'
+        password:     '{{ vaulted_sat6_pass }}'
+        server_url:   '{{ sat_server_url }}'
+        organization: '{{ sat_org }}'
+        name:         'prd-{{ cu_dept }}-soe'
+        description:  'Used by soe-ci, managed by Ansible. Do not automatically sync, soe-ci handles syncing.'
+        state:        present
+
+    # # commented out until https://github.com/theforeman/foreman-ansible-modules/issues/975 is resolved
+    # - name: 'Ensure Repository for soe-ci generated RHEL 7 RPMs exists'
+    #   theforeman.foreman.repository:
+    #     username:     '{{ sat_username }}'
+    #     password:     '{{ vaulted_sat6_pass }}'
+    #     server_url:   '{{ sat_server_url }}'
+    #     organization: '{{ sat_org }}'
+    #     auto_enabled:       no
+    #     checksum_type:      sha256
+    #     content_type:       yum
+    #     download_policy:    immediate
+    #     mirror_on_sync:     yes
+    #     label:              repo-soe-rpms-rhel7
+    #     name:               repo-soe-rpms-rhel7
+    #     product:            'prd-{{ cu_dept }}-soe'
+    #     state:              present
+    #     unprotected:        no
+    #     url:                '{{ repo_url_rpms_rhel7 }}'
+    #     verify_ssl_on_sync: '{{ repo_verify_ssl }}'
+
+    # # commented out until https://github.com/theforeman/foreman-ansible-modules/issues/975 is resolved
+    # - name: 'Ensure Repository for soe-ci generated RHEL 8 RPMs exists'
+    #   theforeman.foreman.repository:
+    #     username:     '{{ sat_username }}'
+    #     password:     '{{ vaulted_sat6_pass }}'
+    #     server_url:   '{{ sat_server_url }}'
+    #     organization: '{{ sat_org }}'
+    #     auto_enabled:     no
+    #     checksum_type:    sha256
+    #     content_type:     yum
+    #     download_policy:  immediate
+    #     mirror_on_sync:   yes
+    #     label:            repo-soe-rpms-rhel8
+    #     name:             repo-soe-rpms-rhel8
+    #     product:          'prd-{{ cu_dept }}-soe'
+    #     state:            present
+    #     unprotected:      no
+    #     url:              '{{ repo_url_rpms_rhel8 }}'
+    #     verify_ssl_on_sync: '{{ repo_verify_ssl }}'
+
+    - name: 'Ensure cv-soe-ci-el7 exists'
+      theforeman.foreman.content_view:
+        username:     '{{ sat_username }}'
+        password:     '{{ vaulted_sat6_pass }}'
+        server_url:   '{{ sat_server_url }}'
+        organization: '{{ sat_org }}'
+        name:         cv-soe-ci-el7
+        state:        present
+        repositories:
+          - name:     'repo-soe-rpms-rhel7'
+            product:  'prd-{{ cu_dept }}-soe'
+          - name:     'Red Hat Enterprise Linux 7 Server Kickstart x86_64 7.8'
+            product:  'Red Hat Enterprise Linux Server'
+          - name:     'Red Hat Enterprise Linux 7 Server RPMs x86_64 7Server'
+            product:  'Red Hat Enterprise Linux Server'
+          - name:     'Red Hat Enterprise Linux 7 Server - RH Common RPMs x86_64 7Server'
+            product:  'Red Hat Enterprise Linux Server'
+          - name:     'Red Hat Satellite Tools 6.7 for RHEL 7 Server RPMs x86_64'
+            product:  'Red Hat Enterprise Linux Server'
+
+    - name: 'Ensure cv-soe-ci-el8 exists'
+      theforeman.foreman.content_view:
+        username:     '{{ sat_username }}'
+        password:     '{{ vaulted_sat6_pass }}'
+        server_url:   '{{ sat_server_url }}'
+        organization: '{{ sat_org }}'
+        name:         cv-soe-ci-el8
+        state:        present
+        repositories:
+          - name:     'repo-soe-rpms-rhel8'
+            product:  'prd-{{ cu_dept }}-soe'
+          - name:     'Red Hat Enterprise Linux 8 for x86_64 - BaseOS Kickstart x86_64 8'
+            product:  'Red Hat Enterprise Linux for x86_64'
+          - name:     'Red Hat Enterprise Linux 8 for x86_64 - AppStream Kickstart x86_64 8'
+            product:  'Red Hat Enterprise Linux for x86_64'
+          - name:     'Red Hat Enterprise Linux 8 for x86_64 - BaseOS RPMs x86_64 8'
+            product:  'Red Hat Enterprise Linux for x86_64'
+          - name:     'Red Hat Enterprise Linux 8 for x86_64 - AppStream RPMs x86_64 8'
+            product:  'Red Hat Enterprise Linux for x86_64'
+          - name:     'Red Hat Satellite Tools 6.7 for RHEL 8 x86_64 RPMs'
+            product:  'Red Hat Enterprise Linux for x86_64'
