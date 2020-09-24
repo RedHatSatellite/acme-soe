@@ -36,43 +36,43 @@
         description:  'Used by soe-ci, managed by Ansible. Do not automatically sync, soe-ci handles syncing.'
         state:        present
 
-    # # commented out until https://github.com/theforeman/foreman-ansible-modules/issues/975 is resolved
-    # - name: 'Ensure Repository for soe-ci generated RHEL 7 RPMs exists'
-    #   theforeman.foreman.repository:
-    #     username:     '{{ sat_username }}'
-    #     password:     '{{ vaulted_sat6_pass }}'
-    #     server_url:   '{{ sat_server_url }}'
-    #     organization: '{{ sat_org }}'
-    #     checksum_type:      sha256
-    #     content_type:       yum
-    #     download_policy:    immediate
-    #     mirror_on_sync:     yes
-    #     label:              repo-soe-rpms-rhel7
-    #     name:               repo-soe-rpms-rhel7
-    #     product:            'prd-{{ cu_dept }}-soe'
-    #     state:              present
-    #     unprotected:        no
-    #     url:                '{{ repo_url_rpms_rhel7 }}'
-    #     verify_ssl_on_sync: '{{ repo_verify_ssl }}'
+    # do NOT use `auto_enabled:` until https://github.com/theforeman/foreman-ansible-modules/issues/975 is resolved
+    - name: 'Ensure Repository for soe-ci generated RHEL 7 RPMs exists'
+      theforeman.foreman.repository:
+        username:     '{{ sat_username }}'
+        password:     '{{ vaulted_sat6_pass }}'
+        server_url:   '{{ sat_server_url }}'
+        organization: '{{ sat_org }}'
+        checksum_type:      sha256
+        content_type:       yum
+        download_policy:    immediate
+        mirror_on_sync:     yes
+        label:              repo-soe-rpms-rhel7
+        name:               repo-soe-rpms-rhel7
+        product:            'prd-{{ cu_dept }}-soe'
+        state:              present
+        unprotected:        no
+        url:                '{{ repo_url_rpms_rhel7 }}'
+        verify_ssl_on_sync: '{{ repo_verify_ssl }}'
 
-    # # commented out until https://github.com/theforeman/foreman-ansible-modules/issues/975 is resolved
-    # - name: 'Ensure Repository for soe-ci generated RHEL 8 RPMs exists'
-    #   theforeman.foreman.repository:
-    #     username:     '{{ sat_username }}'
-    #     password:     '{{ vaulted_sat6_pass }}'
-    #     server_url:   '{{ sat_server_url }}'
-    #     organization: '{{ sat_org }}'
-    #     checksum_type:    sha256
-    #     content_type:     yum
-    #     download_policy:  immediate
-    #     mirror_on_sync:   yes
-    #     label:            repo-soe-rpms-rhel8
-    #     name:             repo-soe-rpms-rhel8
-    #     product:          'prd-{{ cu_dept }}-soe'
-    #     state:            present
-    #     unprotected:      no
-    #     url:              '{{ repo_url_rpms_rhel8 }}'
-    #     verify_ssl_on_sync: '{{ repo_verify_ssl }}'
+    # do NOT use `auto_enabled:` until https://github.com/theforeman/foreman-ansible-modules/issues/975 is resolved
+    - name: 'Ensure Repository for soe-ci generated RHEL 8 RPMs exists'
+      theforeman.foreman.repository:
+        username:     '{{ sat_username }}'
+        password:     '{{ vaulted_sat6_pass }}'
+        server_url:   '{{ sat_server_url }}'
+        organization: '{{ sat_org }}'
+        checksum_type:    sha256
+        content_type:     yum
+        download_policy:  immediate
+        mirror_on_sync:   yes
+        label:            repo-soe-rpms-rhel8
+        name:             repo-soe-rpms-rhel8
+        product:          'prd-{{ cu_dept }}-soe'
+        state:            present
+        unprotected:      no
+        url:              '{{ repo_url_rpms_rhel8 }}'
+        verify_ssl_on_sync: '{{ repo_verify_ssl }}'
 
     ###
     ### FIXME: do the below 2 CVs rather as CCVs is site already uses sth like cv-el8-base (needs kickstart and rpms of Base OS and AppStream plus Sat tools)
