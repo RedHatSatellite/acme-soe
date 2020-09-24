@@ -75,7 +75,7 @@
         verify_ssl_on_sync: '{{ repo_verify_ssl }}'
 
     ###
-    ### FIXME: do the below 2 CVs rather as CCVs is site already uses sth like cv-el8-base (needs kickstart and rpms of Base OS and AppStream plus Sat tools)
+    ### FIXME?: do the below 2 CVs rather as CCVs if site already uses sth like cv-rhel8-base (needs kickstart and rpms of Base OS and AppStream plus Sat tools)
     ###
     - name: 'Ensure cv-soe-ci-el7 exists'
       theforeman.foreman.content_view:
