@@ -43,7 +43,6 @@
     #     password:     '{{ vaulted_sat6_pass }}'
     #     server_url:   '{{ sat_server_url }}'
     #     organization: '{{ sat_org }}'
-    #     auto_enabled:       no
     #     checksum_type:      sha256
     #     content_type:       yum
     #     download_policy:    immediate
@@ -63,7 +62,6 @@
     #     password:     '{{ vaulted_sat6_pass }}'
     #     server_url:   '{{ sat_server_url }}'
     #     organization: '{{ sat_org }}'
-    #     auto_enabled:     no
     #     checksum_type:    sha256
     #     content_type:     yum
     #     download_policy:  immediate
