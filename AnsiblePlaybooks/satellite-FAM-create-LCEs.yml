@@ -2,8 +2,8 @@
 # c.f. https://github.com/theforeman/foreman-ansible-modules
 # and the Plugin Index at https://theforeman.org/plugins/foreman-ansible-modules/
 #
-# This ensures Host Collections (HC) used by soe-ci are present.
-#
+# This ensures Lifecycle Environments (LCE) used by soe-ci are present.
+# for now you can ignore the second one ('SOE image me')
 #
 
 # my Ansible control node connects to the Satellite server.
