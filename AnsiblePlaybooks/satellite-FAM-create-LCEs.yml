@@ -1,0 +1,46 @@
+---
+# c.f. https://github.com/theforeman/foreman-ansible-modules
+# and the Plugin Index at https://theforeman.org/plugins/foreman-ansible-modules/
+#
+# This ensures Host Collections (HC) used by soe-ci are present.
+#
+#
+
+# my Ansible control node connects to the Satellite server.
+# Purely personal preference to run the tasks on my workstation.
+- hosts: localhost
+
+  # put your vars wherever is comforable for you, a Tower, an AWX, a file automatically picked up by Ansible, a file explicitly specified, in this playbook or a mix. Your call, choose what fits your environment best.
+  vars_files:
+    - '/home/pcfe/work/git/HouseNet/ansible/pcfe.net/vars/satellite-secrets.yml' # in my setup that file only contains `vaulted_sat6_pass: …`
+
+  vars:
+    sat_server_url:       'https://satellite.internal.pcfe.net'
+    sat_username:         'admin'
+    sat_password:         '{{ vaulted_sat6_pass }}'
+    sat_org:              'Sat Test'
+
+  tasks:
+    - name: 'Ensure LCE SOE Test is present and after Library'
+      theforeman.foreman.lifecycle_environment:
+        username:     '{{ sat_username }}'
+        password:     '{{ vaulted_sat6_pass }}'
+        server_url:   '{{ sat_server_url }}'
+        organization: '{{ sat_org }}'
+        name:         'SOE Test'
+        label:        'SOE_Test'
+        prior:        'Library'
+        description:  'Used by SOE-CI for test installs'
+        state:        'present'
+
+    - name: 'Ensure LCE SOE image me is present and after SOE Test'
+      theforeman.foreman.lifecycle_environment:
+        username:     '{{ sat_username }}'
+        password:     '{{ vaulted_sat6_pass }}'
+        server_url:   '{{ sat_server_url }}'
+        organization: '{{ sat_org }}'
+        name:         'SOE image me'
+        label:        'SOE_image_me'
+        prior:        'SOE Test'
+        description:  'Used by SOE-CI for VMs of which we create images'
+        state:        'present'
