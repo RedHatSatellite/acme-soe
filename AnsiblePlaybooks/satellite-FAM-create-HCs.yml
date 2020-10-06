@@ -33,3 +33,5 @@
       loop:
         - hc-soe-el7-test
         - hc-soe-el8-test
+        - hc-soe-el7-golden
+        - hc-soe-el8-golden
