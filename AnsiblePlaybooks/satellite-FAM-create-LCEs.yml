@@ -33,14 +33,14 @@
         description:  'Used by SOE-CI for test installs'
         state:        'present'
 
-    - name: 'Ensure LCE SOE image me is present and after SOE Test'
+    - name: 'Ensure LCE SOE golden is present and after SOE Test'
       theforeman.foreman.lifecycle_environment:
         username:     '{{ sat_username }}'
         password:     '{{ vaulted_sat6_pass }}'
         server_url:   '{{ sat_server_url }}'
         organization: '{{ sat_org }}'
-        name:         'SOE image me'
-        label:        'SOE_image_me'
+        name:         'SOE golden'
+        label:        'SOE_golden'
         prior:        'SOE Test'
         description:  'Used by SOE-CI for VMs of which we create images'
         state:        'present'
