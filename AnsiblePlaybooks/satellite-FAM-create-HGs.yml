@@ -1,0 +1,95 @@
+---
+# c.f. https://github.com/theforeman/foreman-ansible-modules
+# and the Plugin Index at https://theforeman.org/plugins/foreman-ansible-modules/
+#
+# This ensures Host Groups (HG) used by soe-ci are present.
+#
+# Please remembeer that soe-ci pick hosts to run tests etc on from Hot Collections, not Groups.
+#
+# HGs created to easily do assignments in a hierarchy (e.g. OS, LCE, etc)
+# adjust this playbook to fit your use of HGs, not the other way around!
+#
+#
+
+# my Ansible control node connects to the Satellite server.
+# Purely personal preference to run the tasks on my workstation.
+- hosts: localhost
+
+  # put your vars wherever is comforable for you, a Tower, an AWX, a file automatically picked up by Ansible, a file explicitly specified, in this playbook or a mix. Your call, choose what fits your environment best.
+  vars_files:
+    - '/home/pcfe/work/git/HouseNet/ansible/pcfe.net/vars/satellite-secrets.yml' # in my setup that file only contains `vaulted_sat6_pass: …`
+
+  vars:
+    sat_server_url:       'https://satellite.internal.pcfe.net'
+    sat_username:         'admin'
+    sat_password:         '{{ vaulted_sat6_pass }}'
+    sat_org:              'Sat Test'
+
+  tasks:
+    - name: 'Ensure HG Test Servers exist'
+      theforeman.foreman.hostgroup:
+        username:     '{{ sat_username }}'
+        password:     '{{ vaulted_sat6_pass }}'
+        server_url:   '{{ sat_server_url }}'
+        name:         'Test Servers'
+
+    - name: 'Ensure nasted HG soe-ci exists'
+      theforeman.foreman.hostgroup:
+        username:     '{{ sat_username }}'
+        password:     '{{ vaulted_sat6_pass }}'
+        server_url:   '{{ sat_server_url }}'
+        parent:       'Test Servers'
+        name:         'soe-ci'
+        state:        present
+
+    - name: 'Ensure nested HGs for each x86_64 major version exist and use latest minor version as os'
+      theforeman.foreman.hostgroup:
+        username:         '{{ sat_username }}'
+        password:         '{{ vaulted_sat6_pass }}'
+        server_url:       '{{ sat_server_url }}'
+        parent:           'Test Servers/soe-ci'
+        name:             '{{ item.name }}'
+        operatingsystem:  '{{ item.os }}'
+        content_view:     '{{ item.cv }}'
+        organization:     '{{ sat_org }}'
+        architecture:     'x86_64'
+        state:            present
+      loop:
+        - { name: 'rhel8', os: 'RedHat 8.2', cv: 'cv-soe-ci-el8' }
+        - { name: 'rhel7', os: 'RedHat 7.9', cv: 'cv-soe-ci-el7' }
+
+    - name: 'Ensure all nested test and golden HGs exist'
+      theforeman.foreman.hostgroup:
+        username:     '{{ sat_username }}'
+        password:     '{{ vaulted_sat6_pass }}'
+        server_url:   '{{ sat_server_url }}'
+        parent:       'Test Servers/soe-ci/{{ item[0] }}'
+        name:         '{{ item[1] }}'
+        state:        present
+      loop:           "{{ ['rhel8', 'rhel7'] | product(['test','golden'])|list }}"
+
+    - name: 'Ensure all test HGs use LCE SOE Test'
+      theforeman.foreman.hostgroup:
+        username:               '{{ sat_username }}'
+        password:               '{{ vaulted_sat6_pass }}'
+        server_url:             '{{ sat_server_url }}'
+        name:                   'Test Servers/soe-ci/{{ item }}/test'
+        lifecycle_environment:  'SOE Test'
+        organization:           '{{ sat_org }}'
+        state:                  present
+      loop:
+        - rhel8
+        - rhel7
+
+    - name: 'Ensure all golden HGs use LCE SOE golden'
+      theforeman.foreman.hostgroup:
+        username:               '{{ sat_username }}'
+        password:               '{{ vaulted_sat6_pass }}'
+        server_url:             '{{ sat_server_url }}'
+        name:                   'Test Servers/soe-ci/{{ item }}/golden'
+        lifecycle_environment:  'SOE golden'
+        organization:           '{{ sat_org }}'
+        state:                  present
+      loop:
+        - rhel8
+        - rhel7
