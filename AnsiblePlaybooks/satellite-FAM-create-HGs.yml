@@ -33,7 +33,7 @@
         server_url:   '{{ sat_server_url }}'
         name:         'Test Servers'
 
-    - name: 'Ensure nasted HG soe-ci exists'
+    - name: 'Ensure nested HG soe-ci exists'
       theforeman.foreman.hostgroup:
         username:     '{{ sat_username }}'
         password:     '{{ vaulted_sat6_pass }}'
