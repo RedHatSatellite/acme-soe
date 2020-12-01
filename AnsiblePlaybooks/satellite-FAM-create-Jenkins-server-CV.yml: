@@ -1,0 +1,55 @@
+---
+# c.f. https://github.com/theforeman/foreman-ansible-modules
+# and the Plugin Index at https://theforeman.org/plugins/foreman-ansible-modules/
+#
+# Note that on this instance, my LCE Path is
+# lce-soecitest2 → SOE Test → Engineering → Development → Quality Assurance → Simulation → Production
+# hence my choices of `force_promote: …` and `auto_publish: …`.
+# You should adjust those two to your needs.
+
+# my Ansible control node connects to the Satellite server.
+# Purely personal preference to run the tasks on my workstation.
+- hosts: localhost
+
+  # put your vars wherever is comforable for you, a Tower, an AWX, a file automatically picked up by Ansible, a file explicitly specified, in this playbook or a mix. Your call, choose what fits your environment best.
+  vars_files:
+    - '/home/pcfe/work/git/HouseNet/ansible/pcfe.net/vars/satellite-secrets.yml' # in my setup that file only contains `vaulted_sat6_pass: …`
+
+  vars:
+    sat_server_url:       'https://satellite.internal.pcfe.net'
+    sat_username:         'admin'
+    sat_password:         '{{ vaulted_sat6_pass }}'
+    sat_org:              'Sat Test'
+    product_jenkins:      'prd-jenkins'
+
+  tasks:
+    - name: 'Ensure Product Jenkins exists'
+      theforeman.foreman.product:
+        username:     '{{ sat_username }}'
+        password:     '{{ vaulted_sat6_pass }}'
+        server_url:   '{{ sat_server_url }}'
+        organization: '{{ sat_org }}'
+        name:         '{{ product_jenkins }}'
+        description:  'See https://jenkins.io/ for details'
+        state:        present
+
+    # do NOT use `auto_enabled:` until https://github.com/theforeman/foreman-ansible-modules/issues/975 is resolved
+    - name: 'Ensure Jenkins Repository redhat-stable exists'
+      theforeman.foreman.repository:
+        username:     '{{ sat_username }}'
+        password:     '{{ vaulted_sat6_pass }}'
+        server_url:   '{{ sat_server_url }}'
+        organization: '{{ sat_org }}'
+        checksum_type:      sha256
+        content_type:       yum
+        download_policy:    immediate
+        mirror_on_sync:     yes
+        label:              jenkins-redhat-stable
+        name:               jenkins-redhat-stable
+        product:            '{{ product_jenkins }}'
+        state:              present
+        unprotected:        no
+        url:                'http://pkg.jenkins-ci.org/redhat-stable/'
+        verify_ssl_on_sync: 'yes'
+
+unfinished
