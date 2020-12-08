@@ -73,7 +73,8 @@
         unprotected:        no
         url:                'http://pkg.jenkins-ci.org/redhat-stable/'
         verify_ssl_on_sync: 'yes'
+        gpg_key:            'gpg-jenkins'
 
-# unfinished: add gpog key and define CV
+# unfinished: define CV
 
 
