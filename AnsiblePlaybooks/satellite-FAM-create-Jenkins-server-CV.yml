@@ -31,6 +31,19 @@
         dest: /tmp/jenkins.io.key
         checksum: sha256:f6b8584841a7f2852ad9a00b8f8d53ba40bb2942c8d6b99d6bf30a4f48b0cf69
 
+    # n.b.: you could also omit the previous get_url task and do something like
+    # content: "{{ lookup('url', 'https://pkg.jenkins.io/redhat-stable/jenkins.io.key') }}"
+    # Merci Zhenech.
+    # but that will take away the check that the GPG key retrieved over https actually matches the checksum in this playbook
+    - name: "Ensure Satellite knows the GPG key used to sign the Jenkins redhat-stable RPMs"
+      theforeman.foreman.content_credential:
+        username:     '{{ sat_username }}'
+        password:     '{{ vaulted_sat6_pass }}'
+        server_url:   '{{ sat_server_url }}'
+        organization: '{{ sat_org }}'
+        name:         'gpg-jenkins'
+        content_type: gpg_key
+        content:      "{{ lookup('file', '/tmp/jenkins.io.key') }}"
 
     - name: 'Ensure Product Jenkins exists'
       theforeman.foreman.product:
@@ -61,18 +74,6 @@
         url:                'http://pkg.jenkins-ci.org/redhat-stable/'
         verify_ssl_on_sync: 'yes'
 
-# unfinished: also ensure that the gpg key is there.
-# take bits from my "create-sat-structures.adoc:=== Add the Jenkins GPG Key to Satellite"
-# https://theforeman.github.io/foreman-ansible-modules/v1.5.0/plugins/content_credential_module.html
-# example:
-# - name: "Create katello client GPG key"
-#   theforeman.foreman.content_credential:
-#     username: "admin"
-#     password: "changeme"
-#     server_url: "https://foreman.example.com"
-#     name: "RPM-GPG-KEY-my-repo"
-#     content_type: gpg_key
-#     organization: "Default Organization"
-#     content: "{{ lookup('file', 'RPM-GPG-KEY-my-repo') }}"
+# unfinished: add gpog key and define CV
 
 
