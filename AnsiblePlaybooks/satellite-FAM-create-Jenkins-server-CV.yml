@@ -23,6 +23,15 @@
     product_jenkins:      'prd-jenkins'
 
   tasks:
+    # If the key at https://pkg.jenkins.io/redhat-stable/jenkins.io.key changes,
+    # then be sure to update your sha256sum in this task
+    - name: 'Ensure we have a local copy of the GPG key jenkins.io.key'
+      get_url:
+        url: https://pkg.jenkins.io/redhat-stable/jenkins.io.key
+        dest: /tmp/jenkins.io.key
+        checksum: sha256:f6b8584841a7f2852ad9a00b8f8d53ba40bb2942c8d6b99d6bf30a4f48b0cf69
+
+
     - name: 'Ensure Product Jenkins exists'
       theforeman.foreman.product:
         username:     '{{ sat_username }}'
@@ -52,4 +61,18 @@
         url:                'http://pkg.jenkins-ci.org/redhat-stable/'
         verify_ssl_on_sync: 'yes'
 
-unfinished
+# unfinished: also ensure that the gpg key is there.
+# take bits from my "create-sat-structures.adoc:=== Add the Jenkins GPG Key to Satellite"
+# https://theforeman.github.io/foreman-ansible-modules/v1.5.0/plugins/content_credential_module.html
+# example:
+# - name: "Create katello client GPG key"
+#   theforeman.foreman.content_credential:
+#     username: "admin"
+#     password: "changeme"
+#     server_url: "https://foreman.example.com"
+#     name: "RPM-GPG-KEY-my-repo"
+#     content_type: gpg_key
+#     organization: "Default Organization"
+#     content: "{{ lookup('file', 'RPM-GPG-KEY-my-repo') }}"
+
+
