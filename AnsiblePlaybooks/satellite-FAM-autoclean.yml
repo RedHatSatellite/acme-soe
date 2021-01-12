@@ -1,0 +1,33 @@
+---
+###
+### WARNING, this playbook deletes CV versions!
+### You MUST read the friendly manual before using it!
+###
+# c.f. https://github.com/theforeman/foreman-ansible-modules
+# and the Plugin Index at https://theforeman.org/plugins/foreman-ansible-modules/
+# and https://theforeman.github.io/foreman-ansible-modules/v1.5.1/cvmanager.html#cleanup-of-old-content-views
+# adjust above URL to whichever is the version of FAM you use, today the most current is 1.5.1
+#
+# my Ansible control node connects to the Satellite server.
+# Purely personal preference to run the tasks on my workstation.
+- hosts: localhost
+
+  # put your vars wherever is comforable for you, a Tower, an AWX, a file automatically picked up by Ansible, a file explicitly specified, in this playbook or a mix. Your call, choose what fits your environment best.
+  vars_files:
+    - '/home/pcfe/work/git/HouseNet/ansible/pcfe.net/vars/satellite-secrets.yml' # in my setup that file only contains `vaulted_sat6_pass: …`
+
+  # FIXME? this might confuse noobs, while it's consistent with my soe-ci playbooks, maybe prune down to one set of vars?
+  vars:
+    sat_server_url:       'https://satellite.internal.pcfe.net'
+    sat_username:         'admin'
+    sat_password:         '{{ vaulted_sat6_pass }}'
+    sat_org:              'Sat Test'
+
+  roles:
+    - role: theforeman.foreman.content_view_version_cleanup
+      vars:
+        content_view_version_cleanup_keep: 3
+        server_url: '{{ sat_server_url }}'
+        username: '{{ sat_username }}'
+        password: '{{ sat_password }}'
+        organization: '{{ sat_org }}'
