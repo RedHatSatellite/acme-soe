@@ -75,6 +75,21 @@
         verify_ssl_on_sync: 'yes'
         gpg_key:            'gpg-jenkins'
 
-# unfinished: define CV
+    - name: 'Ensure cv-app-jenkins exists'
+      theforeman.foreman.content_view:
+        username:     '{{ sat_username }}'
+        password:     '{{ vaulted_sat6_pass }}'
+        server_url:   '{{ sat_server_url }}'
+        organization: '{{ sat_org }}'
+        name:         cv-app-jenkins
+        state:        present
+        repositories:
+          - name:     jenkins-redhat-stable
+            product:  '{{ product_jenkins }}'
 
+# unfinished:
+# 1) the jenkins repo neeeds to be in a sync plan
+# 2) define CVs cv-RHEL7-base, cv-RHEL8-base, cv-epel7 and cv-epel8 exist
+# 3) EPEL and RHEL repos should sync in the same sync plan
+# 4) make 2 CCVs one for jenkins on el7 and one for el8
 
