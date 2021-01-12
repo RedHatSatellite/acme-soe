@@ -1,6 +1,6 @@
 ---
 ###
-### WARNING, this playbook deletes CV versions!
+### WARNING, this playbook deletes CV versions, across ALL (C)CVs!
 ### You MUST read the friendly manual before using it!
 ###
 # c.f. https://github.com/theforeman/foreman-ansible-modules
@@ -10,7 +10,7 @@
 #
 # my Ansible control node connects to the Satellite server.
 # Purely personal preference to run the tasks on my workstation.
-- hosts: localhost
+- hosts: this-playbook-must-be-adjusted
 
   # put your vars wherever is comforable for you, a Tower, an AWX, a file automatically picked up by Ansible, a file explicitly specified, in this playbook or a mix. Your call, choose what fits your environment best.
   vars_files:
