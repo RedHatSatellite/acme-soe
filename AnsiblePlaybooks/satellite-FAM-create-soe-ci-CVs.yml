@@ -94,7 +94,7 @@
             product:  'Red Hat Enterprise Linux Server'
           - name:     'Red Hat Enterprise Linux 7 Server - RH Common RPMs x86_64 7Server'
             product:  'Red Hat Enterprise Linux Server'
-          - name:     'Red Hat Satellite Tools 6.7 for RHEL 7 Server RPMs x86_64' # remember to adjust when you updatye your Satellite 6.7 to a later version
+          - name:     'Red Hat Satellite Tools 6.9 for RHEL 7 Server RPMs x86_64' # remember to adjust when you updatye your Satellite 6.7 to a later version
             product:  'Red Hat Enterprise Linux Server'
 
     - name: 'Ensure cv-soe-ci-el8 exists'
@@ -116,5 +116,5 @@
             product:  'Red Hat Enterprise Linux for x86_64'
           - name:     'Red Hat Enterprise Linux 8 for x86_64 - AppStream RPMs x86_64 8'
             product:  'Red Hat Enterprise Linux for x86_64'
-          - name:     'Red Hat Satellite Tools 6.7 for RHEL 8 x86_64 RPMs' # remember to adjust when you updatye your Satellite 6.7 to a later version
+          - name:     'Red Hat Satellite Tools 6.9 for RHEL 8 x86_64 RPMs' # remember to adjust when you updatye your Satellite 6.7 to a later version
             product:  'Red Hat Enterprise Linux for x86_64'
